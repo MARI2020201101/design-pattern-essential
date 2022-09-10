@@ -1,10 +1,10 @@
 package ch03.template;
 
 abstract class AbstractDisplay {
-    abstract void open();
-    abstract void close();
-    abstract void print();
-    void display(){
+    protected abstract void open();
+    protected abstract void close();
+    protected abstract void print();
+    final void display(){
         open();
         for (int i = 0; i < 5; i++) {
             print();
@@ -19,15 +19,15 @@ class CharDisplay extends AbstractDisplay{
         this.c = c;
     }
     @Override
-    void open() {
+    protected void open() {
         System.out.print("<<");
     }
     @Override
-    void close() {
+    protected void close() {
         System.out.println(">>");
     }
     @Override
-    void print() {
+    protected void print() {
         System.out.print(c);
     }
 }
@@ -40,7 +40,7 @@ class StringDisplay extends AbstractDisplay{
         this.width = str.length() +2;
     }
     @Override
-    void open() {
+    protected void open() {
         System.out.println(printLine());
     }
 
@@ -55,12 +55,12 @@ class StringDisplay extends AbstractDisplay{
     }
 
     @Override
-    void close() {
+    protected void close() {
         System.out.println(printLine());
     }
 
     @Override
-    void print() {
+    protected void print() {
         System.out.println("| " + str + " |");
     }
 }
