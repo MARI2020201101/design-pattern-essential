@@ -1,0 +1,5 @@
+#written by class ch02.properties.FileProperties
+#Sat Sep 10 10:08:13 KST 2022
+month=11
+year=2000
+day=20
