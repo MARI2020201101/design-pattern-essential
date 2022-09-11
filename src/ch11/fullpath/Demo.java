@@ -1,4 +1,4 @@
-package ch11.composite;
+package ch11.fullpath;
 
 class Demo {
     public static void main(String[] args) {
@@ -20,7 +20,7 @@ class Demo {
         document.addEntries(works);
         root.addEntries(document);
 
-        root.print(0);
+        root.printFull("");
 
     }
 }
