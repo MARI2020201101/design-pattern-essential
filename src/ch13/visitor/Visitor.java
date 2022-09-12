@@ -7,7 +7,6 @@ interface Visitor {
     void visit(MyFile file);
 }
 class BasicVisitor implements Visitor{
-
     @Override
     public void visit(MyDir dir) {
         String dirName = dir.dirName;
@@ -23,6 +22,8 @@ class BasicVisitor implements Visitor{
         System.out.println(fileName);
     }
 }
+
+
 class ListVisitor implements Visitor{
     private String prevPath;
 
